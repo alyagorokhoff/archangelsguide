@@ -1,0 +1,26 @@
+/* Keep every card title inside its frame, including long single-word titles. */
+.oracle-card {
+  min-width: 0;
+}
+
+.oracle-card h2 {
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 2px;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .oracle-card h2 {
+    font-size: clamp(1.7rem, 8.2vw, 2.1rem);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+  }
+}
+
+@media (max-width: 360px) {
+  .oracle-card h2 {
+    font-size: clamp(1.55rem, 8vw, 1.85rem);
+  }
+}
