@@ -1,0 +1,4 @@
+.topbar-actions{display:flex;align-items:center;gap:10px}
+.test-reset{height:38px;padding:0 14px;border:1px solid #caae7747;border-radius:999px;background:#ffffff05;color:#d7c29d;font:9px Manrope,sans-serif;letter-spacing:.14em;cursor:pointer}
+.test-reset span{font-size:15px;margin-right:5px}.test-reset b{font:inherit}
+@media(max-width:640px){.test-reset{width:38px;padding:0}.test-reset span{margin:0;font-size:18px}.test-reset b{display:none}}
