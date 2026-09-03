@@ -1912,3 +1912,108 @@ body main .decision-covers::after {
     bottom: 10px;
   }
 }
+
+/* Dimensional light and calm breathing depth */
+body main .site-header {
+  background: rgba(255, 250, 247, .72);
+  box-shadow: 0 12px 34px rgba(84, 39, 53, .055);
+  backdrop-filter: blur(14px);
+}
+body main .compact-versions {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(255, 255, 255, .72), transparent 29%),
+    radial-gradient(circle at 86% 82%, rgba(151, 91, 108, .14), transparent 34%),
+    linear-gradient(180deg, #f1dfdc 0%, #f8ece8 100%);
+}
+body main .compact-versions::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 430px;
+  height: 430px;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, .46), rgba(255, 255, 255, 0) 70%);
+}
+body main .price-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+body main .basic-card {
+  background: linear-gradient(155deg, rgba(255, 253, 250, .98), rgba(250, 239, 235, .96));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .95) inset,
+    0 10px 24px rgba(84, 39, 53, .07),
+    0 30px 70px rgba(84, 39, 53, .09);
+}
+body main .premium-card {
+  box-shadow:
+    0 1px 0 rgba(255, 244, 218, .2) inset,
+    0 16px 34px rgba(49, 21, 31, .2),
+    0 38px 82px rgba(49, 21, 31, .28);
+}
+body main .premium-card .popular-badge {
+  position: static;
+  align-self: flex-end;
+  flex: 0 0 auto;
+  margin: 17px 18px 0 !important;
+  min-height: 29px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .45) inset,
+    0 8px 20px rgba(26, 8, 14, .22);
+}
+body main .premium-card [data-slot="card-header"] {
+  padding-top: 12px !important;
+}
+body main .choice-button,
+body main .header-button,
+body main .final-button {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .22) inset,
+    0 12px 28px rgba(84, 39, 53, .17);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+body main .short-deck .deck-card-back {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .14) inset,
+    0 20px 42px rgba(16, 4, 8, .28),
+    0 42px 86px rgba(16, 4, 8, .38);
+}
+
+@keyframes premium-breathe {
+  0%, 100% {
+    box-shadow: 0 1px 0 rgba(255, 244, 218, .2) inset, 0 16px 34px rgba(49, 21, 31, .2), 0 38px 82px rgba(49, 21, 31, .28);
+  }
+  50% {
+    box-shadow: 0 1px 0 rgba(255, 244, 218, .24) inset, 0 20px 40px rgba(49, 21, 31, .24), 0 44px 96px rgba(100, 48, 64, .34);
+  }
+}
+
+@media (hover: hover) {
+  body main .basic-card:hover { transform: translateY(-5px); }
+  body main .premium-card:hover { transform: translateY(-12px); }
+  body main .choice-button:hover,
+  body main .header-button:hover,
+  body main .final-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .25) inset, 0 17px 34px rgba(84, 39, 53, .22);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 761px) {
+  body main .premium-card { animation: premium-breathe 7s ease-in-out infinite; }
+}
+
+@media (max-width: 760px) {
+  body main .premium-card .popular-badge {
+    align-self: center;
+    margin-top: 15px !important;
+  }
+  body main .premium-card [data-slot="card-header"] {
+    padding-top: 10px !important;
+  }
+}
