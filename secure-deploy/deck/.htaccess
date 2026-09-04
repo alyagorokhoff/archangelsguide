@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ gateway.php?path=index.html [L,QSA]
+RewriteRule ^gateway\.php$ - [L]
+RewriteRule ^(.+)$ gateway.php?path=$1 [L,QSA]
+
